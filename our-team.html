@@ -2,18 +2,59 @@
     <div class="view view-main">
 
         <div class="pages navbar-fixed">
-            <div data-page="cart" class="page">
+            <div data-page="our-team" class="page">
+
                 <div class="navbar">
                     <div class="navbar-inner">
                         <div class="left"><a href="#" class="open-panel link icon-only"><i class="material-icons">menu</i></a></div>
                         <div class="center">Leadership & Staff</div>
                     </div>
                 </div>
+    <div class="page-content">
+                        <div class="list-block">
 
-                <div class="page-content">
-                <div style="height:100%"> 
-  <iframe src="http://www.calvarychapel.co.za/about-us/staff-and-leadership/" style="height:100%;width:100%"></iframe> 
-  </div> 
+     <ul>
+      {{#each people}}
+        <li class="swipeout product1">
+        <div class="card ks-card-header-pic">
+                            
+                                <div class="card ks-card-header-pic">   
+
+                                <a href="#" style="background-image:url(img/demitrikaren.jpg);width:100%;margin: 10 auto;" valign="bottom" class="card-header color-white no-border">
+
+                                <div class="opacity-container">
+                                    <div class="category-title"> {{this}}</div>
+                                </div>
+                                 </a>
+                                    
+                                   <!-- 
+ <div class="card-footer">
+                                        <div class="product-price"><i>Senior Pastor</i></div>
+                                    </div>
+ -->
+                                    <div class="card-footer">
+                                        <p>
+											Demitri and Karen have served together in ministry since 1993, 
+											first with Christian Surfers South Africa and later with Calvary Chapel. 
+											Sensing the call of God upon their lives, Demitri left his career in 
+											engineering and became a full time pastor in 1999. Establishing the 
+											church in the inner-city of Cape Town, they have seen Christ miraculously 
+											saving and transforming people from all walks of life, including 
+											prostitutes, criminals, drug addicts, refugees and the homeless. 
+											Demitri and Karen reside in central Cape Town and are blessed with 
+											four precious children – Shiloh, Daniela, Chloe and Micah.</p>
+                                    </div>
+                            </div>
+       
+        </li>
+        {{/each}}
+                                              
+       </ul>
+       </div>
+     
+    </div>
+                <!-- 
+<div class="page-content">
                     <div class="list-block">
                         <ul>
                             <li class="swipeout product1">
@@ -44,7 +85,7 @@
                             </div>
                             </li>
 
-                            <!-- 
+                            <!~~ 
 <li class="swipeout product2">
                                 <div class="card ks-card-header-pic">
                                     <div style="background-image:url(img/product2.jpg);width: 70%;margin: 0 auto;" valign="bottom" class="card-header color-white no-border"></div>
@@ -70,7 +111,7 @@
                                     </div>
                                 </div>
                             </li>
- -->
+ ~~>
                         </ul>
                     </div>
 
@@ -82,6 +123,7 @@
                     </div>
 
                 </div>
+ -->
 
             </div>
         </div>
