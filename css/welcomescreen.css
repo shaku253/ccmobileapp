@@ -1,0 +1,225 @@
+.welcomescreen-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  z-index: 10500;
+  color: #2196f3;
+  font-size: 16px;
+  font-weight : 400;
+}
+
+.welcomescreen-closebtn{
+  top: 5px;
+  right: 5px;
+  position: absolute;
+  text-align: right;
+  z-index: 9998;
+  font-size: 14px;
+  padding: 15px;
+}
+
+.welcomescreen-swiper {
+  position:relative;
+  width: 100%;
+  height: 100%;
+}
+
+.welcomescreen-title{
+  width: 100%;
+  text-align: center;
+  font-size: 35px;
+  font-weight:400;
+  margin-top: 2%;
+}
+
+.welcomescreen-picture{
+  width: 100%;
+  text-align: center;
+/* 
+  margin-top: 2%;
+ */
+
+}
+
+.welcomescreen-text {
+  position:absolute;
+/* 
+  bottom: 20%;
+ */
+   margin-top: 2%;
+  left: 0;
+  right: 0;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align:center;
+  font-weight:200;
+}
+.welcomescreen-content {
+  padding: 15px;
+}
+
+.welcomescreen-container .swiper-pagination-bullet{
+  background: rgba(255, 255, 255, 0.9) !important;
+}
+
+.welcomescreen-container .swiper-pagination-bullet-active{
+  background: #fff;
+}
+
+.swiper-container-horizontal>.swiper-pagination{
+  bottom: 20px;
+}
+
+html.with-statusbar-overlay .welcomescreen-container{
+    top: 20px;
+}
+
+/*
+    Parallax Background Effect
+*/
+.parallax-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 130%;
+    height: 100%;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center;
+}
+
+.hide-title {
+    opacity: 0;
+}
+
+/* 
+Added by Shaku
+*/
+
+.panel-overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  z-index: 5999;
+  display: none;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-transition-duration: 300ms;
+  transition-duration: 300ms;
+}
+
+.panel {
+  z-index: 1000;
+  display: none;
+  background: #fff;
+  box-sizing: border-box;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  position: absolute;
+  width: 260px;
+  top: 0;
+  height: 100%;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-transition-duration: 300ms;
+  transition-duration: 300ms;
+}
+.panel.panel-left.panel-cover {
+  z-index: 6000;
+  left: -260px;
+}
+.panel.panel-left.panel-reveal {
+  left: 0;
+}
+.panel.panel-right.panel-cover {
+  z-index: 6000;
+  right: -260px;
+}
+.panel.panel-right.panel-reveal {
+  right: 0;
+}
+/* === Lists === */
+.list-block {
+  margin: 32px 0;
+  font-size: 16px;
+}
+.list-block ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+.list-block ul:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: auto;
+  right: auto;
+  height: 1px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.12);
+  display: block;
+  z-index: 15;
+  -webkit-transform-origin: 50% 0%;
+  transform-origin: 50% 0%;
+}
+
+.panel {
+  background-color: white;
+}
+
+.material-icons.menu {
+  color: #607d8b;
+  font-size: 20px;
+}
+
+.item-title.menu {
+  color: #000000;
+  font-weight: 300;
+  /* 
+color: #607d8b;
+  font-weight: 500;
+ */
+}
+
+.item-inner.menu {
+  background-image: none !important;
+}
+
+ul.menu:before,
+ul.menu:after,
+.item-inner.menu:after {
+  display: none;
+}
+
+/* === Statusbar overlay === */
+html.with-statusbar-overlay body {
+  padding-top: 20px;
+  box-sizing: border-box;
+}
+html.with-statusbar-overlay body .statusbar-overlay {
+  display: block;
+}
+html.with-statusbar-overlay body .panel {
+  padding-top: 20px;
+}
+.statusbar-overlay {
+  background: #2196f3;
+  z-index: 10000;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 20px;
+  width: 100%;
+  display: none;
+  -webkit-transition-duration: 300ms;
+  transition-duration: 300ms;
+}

@@ -2096,6 +2096,32 @@ i.icon.icon-f7 {
   background-image: url("../img/i-f7-ios.png");
   border-radius: 6px;
 }
+
+i.icon.icon-calvary { 
+width:230px; 
+height: 230px; 
+background-image: url("../img/calvarymobileicon.png"); 
+}
+i.icon.icon-listen-online { 
+width:32px; 
+height: 32px; 
+background-image: url("../img/listen-online.png"); 
+}
+i.icon.icon-connect { 
+width:30px; 
+height: 30px; 
+background-image: url("../img/connect.png"); 
+}
+i.icon.icon-our-team { 
+width:30px; 
+height: 30px; 
+background-image: url("../img/our-team.png"); 
+}
+i.icon.icon-info { 
+width:30px; 
+height: 30px; 
+background-image: url("../img/info.png"); 
+}
 i.icon.icon-next,
 i.icon.icon-prev {
   width: 15px;

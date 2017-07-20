@@ -57,7 +57,9 @@ p {
 }
 
 .card {
+/* 
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.12), 0px 0px 3px 0px rgba(0, 0, 0, 0.24);
+ */
 }
 
 .opacity-container {
@@ -114,7 +116,7 @@ p {
 .item-title.product {
 color:#000000;
 /*   color: #607d8b; */
-  font-weight: 500;
+  font-weight: 200;
   text-align:center;
 }
 
@@ -202,8 +204,12 @@ color:#000000;
 }
 
 .item-title.menu {
-  color: #607d8b;
+  color: #000000;
+  font-weight: 300;
+  /* 
+color: #607d8b;
   font-weight: 500;
+ */
 }
 
 .item-inner.menu {

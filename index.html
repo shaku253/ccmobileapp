@@ -13,60 +13,18 @@
     <link rel="stylesheet" href="css/default-style.css">
     <link rel="stylesheet" href="css/my-app.css">
     <link rel="stylesheet" href="framework7-icons.css">
+    <link rel="stylesheet" href="css/welcomescreen.css">
+
     <link href="http://fonts.googleapis.com/css?family=Roboto:400,300,500,700" rel="stylesheet" type="text/css">
     <link rel="shortcut icon" href="img/icon/icon.png" type="image/x-icon" />
     <link rel="apple-touch-icon" href="img/icon/icon.png">
     <link rel="apple-touch-icon-precomposed" href="img/icon/icon.png">
-<!-- 
-    <link rel="stylesheet" href="welcomescreen.css">
- -->
  
-<script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
-<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyAG6dy3N_aRruNXopb33h0YXtxMBYIMsOw",
-    authDomain: "calvarychapelmobile.firebaseapp.com",
-    databaseURL: "https://calvarychapelmobile.firebaseio.com",
-    projectId: "calvarychapelmobile",
-    storageBucket: "calvarychapelmobile.appspot.com",
-    messagingSenderId: "311828822900"
-  };
-  firebase.initializeApp(config);
-</script>
-<!--Skygear CDN-->
-<script src="https://code.skygear.io/js/polyfill/latest/polyfill.min.js"></script>
-<script src="https://code.skygear.io/js/skygear/latest/skygear.min.js"></script>
 
-<!--Skygear configuration-->
-<!--The app end point and the api key can be found in the developer portal-->
-<script>
-  skygear.config({
-  'endPoint': 'https://<calvarychapelmobile>.skygeario.com/', // trailing slash is required
-    'apiKey': '<e99fd2758cb340dbbd36553e0bc074be>',
-}).then(function() {
-  // Every record in Skygear must be owned by a user
-  // For testing purpose, we have used signupAnonmously to create a record
-  // Visit the user authetication documentation to learn more
-  // https://docs.skygear.io/guides/auth/basics/js/
-  return skygear.signupAnonymously()
-}).then(function() {
-  // Create Record Type "test" and put "Hello world" as value of key "content"
-  // Advanced: Skygear Server will create a table "test" and appropriate
-  //           columns in PostgreSQL in Development mode.
-  var Test = skygear.Record.extend('test');
-  return skygear.publicDB.save(new Test({
-    'content': 'Hello World'
-  }));
-}).then(function(record) {
-  console.log('Record saved');
-}).catch(function(err) {
-  console.error('Error: ' + err.message);
-});
-</script>
 </head>
 
 <body>
+
     <div class="statusbar-overlay"></div>
     <div class="panel-overlay"></div>
     <div class="panel panel-left panel-cover">
@@ -81,7 +39,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="http://www.calvarychapel.co.za/our-team.html" class="item-link item-content">
+                    <a href="our-team.html" class="item-link item-content">
                         <div class="item-media"><i class="icon icon-our-team size-18"></i></div>
                         <div class="item-inner menu">
                             <div class="item-title menu">Our Team</div>
@@ -89,7 +47,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="http://www.calvarychapel.co.za/events/weekly-events/" class="item-link item-content">
+                    <a href="http://www.calvarychapel.co.za/events/weekly-events/" class="item-link item-content" target="_blank">
                         <div class="item-media"><i class="icon icon-connect size-18"></i></div>
                         <div class="item-inner menu">
                             <div class="item-title menu">Connect</div>
@@ -138,8 +96,8 @@
 
     <div class="views">
         <div class="view view-main">
-            <div class="pages navbar-fixed toolbar-fixed">
-                <div data-page="index" class="page">
+            <div class="pages">
+                <div data-page="index" class="page navbar-fixed toolbar-fixed">
                     <div class="navbar">
                         <div class="navbar-inner">
                             <div class="left"><a href="#" class="open-panel link icon-only"><i class="material-icons">menu</i></a></div>
@@ -198,126 +156,55 @@
  -->
                     </div>
                     
-                    
-                </div>
-                <div class="toolbar">
+                    <!-- 
+<div class="toolbar">
    <div class="toolbar-inner">
       <a href="http://www.calvarychapel.co.za/our-team.html" class="item-link item-content">
-                        <div class="item-media"><i class="icon icon-our-team size-18"></i></div>
-                        <div class="item-inner menu">
-                            <div class="item-title menu">Our Team</div>
+                        <div class="item-media"><i class="icon icon-our-team size-24"></i></div>
+                        <div class="item-inner left">
+                            <div class="item-title center">Our Team</div>
                         </div>
                     </a>
       <a href="http://www.calvarychapel.co.za/events/weekly-events/" class="item-link item-content">
-                        <div class="item-media"><i class="icon icon-connect size-18"></i></div>
-                        <div class="item-inner menu">
-                            <div class="item-title menu">Connect</div>
+                        <div class="item-media"><i class="icon icon-connect size-24"></i></div>
+                        <div class="item-inner center">
+                            <div class="item-title center">Connect</div>
                         </div>
                     </a>
       <a href="#about" class="item-link item-content">
-                        <div class="item-media"><i class="icon icon-info size-18"></i></div>
-                        <div class="item-inner menu">
-                            <div class="item-title menu">About Calvary Chapel</div>
+                        <div class="item-media"><i class="icon icon-info size-24"></i></div>
+                        <div class="item-inner right">
+                            <div class="item-title center">About Calvary Chapel</div>
                         </div>
                     </a>
    </div>
-                <div data-page="about" class="page cached">
-                    <div class="navbar">
-                    <div class="navbar-inner">
-                        <div class="left"><a href="#" class="open-panel link icon-only"><i class="material-icons">menu</i></a></div>
-                        <div class="center">About us</div>
-                    </div>
+       
                 </div>
-
-                <div class="page-content">
-                    <div class="list-block">
-                        <ul>
-                            <li class="swipeout product1">
-                                <div class="card ks-card-header-pic">
-                                    <div style="background-image:url(img/about-calvary.jpg);width: 100%;margin: 0 auto;" valign="bottom" class="card-header color-white no-border"></div>
-                                    <div class="text">
-<p>Calvary Chapel Community Church is a member of the Calvary Chapel group of churches. 
-We are based in the heart of Cape Town, South Africa, and have been ministering in our city since 1999.</p>
-
-<h2 class="product-name">Small beginnings</h2>
-<p>
-WWWWhile there are well over a thousand Calvary Chapels around the world today, 
-Calvary Chapel started out in America in 1965 as a single congregation of 25 
-members in Costa Mesa, California. On the verge of closing down their ailing 
-church, the Lord encouraged them with a prophetic word that He would bless 
-their church, that it would become overcrowded, and that it would become 
-known throughout the world. Although this all seemed highly unlikely at the 
-time, God sent a sweeping revival in the late 1960’s that led to thousands 
-of conversions, baptisms, and the growth of Calvary Chapel.
-</p>
-
-<blockquote>When he came and had seen the grace of God, he was glad, and encouraged them all that with purpose of heart they should continue with the Lord - Acts 11:23.</blockquote>
-                       </div>
-   
-                            </li>
-<!-- 
-
-                            <li class="swipeout product2">
-                                <div class="card ks-card-header-pic">
-                                    <div style="background-image:url(img/product2.jpg);width: 70%;margin: 0 auto;" valign="bottom" class="card-header color-white no-border"></div>
-                                    <div class="card-footer">
-                                        <div class="product-name">Product Name</div>
-                                    </div>
-                                    <div class="card-footer">
-                                        <div class="product-price">490€</div>
-                                        <div class="delete2"><a href="#" class="link icon-only"><i class="material-icons product-detail">delete</i></a></div>
-                                    </div>
-                                </div>
-                            </li>
  -->
-                        </ul>
-                    </div>
-
-                    <!-- 
-<div class="card ks-card-header-pic">
-                        <div class="card-footer">
-                            <div class="product-total">Total:</div>
-                            <div class="product-price total">2 480€</div>
-                        </div>
-                        <div class="card-footer">
-                            <a href="#" class="button button-raised larger">Order now</a>
-                        </div>
-                    </div>
- -->
-
-                </div>
-
-                    </div>
                     
                     
                 </div>
+                
             </div>
         </div>
     </div>
 
     <script type="text/javascript" src="js/framework7.js"></script>
-<!-- 
-    <script src="welcomescreen.js"></script>
- -->
+	<script type="text/javascript" src="js/welcomescreen.js"></script>
 
 
 <!-- -->
     <script type="text/javascript" src="js/my-app.js"></script>
     <!-- PhoneGap -->
     <script src="lib/ngCordova/dist/ng-cordova.js"></script>
-<!--     <script type="text/javascript" src="cordova.js"></script> -->
-
-<!-- 
+    <script type="text/javascript" src="cordova.js"></script>
     <script src="cordova.js"></script>
- -->
-<!-- 
     <script src="js/ng-cordova.min.js"></script>
- -->
 
 
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript">
-        app.initialize();
+  
     </script>
 </body>
 

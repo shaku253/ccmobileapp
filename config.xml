@@ -40,6 +40,13 @@
   <gap:plugin name="org.apache.cordova.network-information"/>
   <gap:plugin name="org.apache.cordova.splashscreen"/>
   <gap:plugin name="org.apache.cordova.vibration"/>
+  <feature name="Media">
+    <param name="ios-package" value="CDVSound" />
+</feature>
+<feature name="Media">
+    <param name="android-package" value="org.apache.cordova.media.AudioHandler" />
+</feature>
+
   <icon src="img/icon/icon.png"/>
   <icon src="www/img/icon/android/icon-36-ldpi.png" gap:platform="android" gap:qualifier="ldpi"/>
   <icon src="www/img/icon/android/icon-48-mdpi.png" gap:platform="android" gap:qualifier="mdpi"/>
